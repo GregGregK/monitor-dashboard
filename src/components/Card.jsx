@@ -17,6 +17,10 @@ const Card = ({ url }) => {
     }
   };
 
+
+
+  //Reiniciar a chamada de APIS de tempo em tempo
+
   useEffect(() => {
     fetchData();
 
@@ -36,8 +40,12 @@ const Card = ({ url }) => {
 
   return (
     <tr className={cardClassName}>
-      <td className='name'>{name}</td>
-      <td >
+      <td className='name'>
+        <a href={url + '/documentation/'} target="_blank" rel="noopener noreferrer">
+          {name}
+        </a>
+      </td>
+      <td>
         <span className='status'>
           <span className='status-name'>{status}</span>
         </span>
